@@ -1,0 +1,227 @@
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background: #1d4ed8;
+  color: white;
+  padding: 24px max(24px, calc((100% - 1200px) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+  color: #dbeafe;
+}
+
+.book-count {
+  background: white;
+  color: #1d4ed8;
+  padding: 10px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+}
+
+.primary-button,
+.secondary-button,
+.edit-button,
+.delete-button {
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 15px;
+}
+
+.primary-button {
+  color: white;
+  background: #2563eb;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.table-card,
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 12px #0000000a;
+}
+
+.table-card h2,
+.form-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #eff6ff;
+  color: #1e40af;
+  white-space: nowrap;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.edit-button {
+  background: #dbeafe;
+  color: #1d4ed8;
+  margin-right: 6px;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+.note {
+  margin-bottom: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-grid label,
+.description-label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: bold;
+}
+
+.form-grid input,
+.description-label textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-weight: normal;
+}
+
+.description-label {
+  margin-top: 18px;
+}
+
+.description-label textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-card,
+  .form-card {
+    padding: 16px;
+  }
+}
